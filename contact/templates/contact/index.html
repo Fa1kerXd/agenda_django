@@ -16,6 +16,30 @@
                     <th class="table-header">Email</th>
                 </tr>
             </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr class="table-row">
+                        <td class="table-cell">
+                            <a class="table-link" href="{% url "contact:contact" contact.id%}">
+                                {{contact.id}}
+                            </a>
+                        </td>
+                        <td class="table-cell">
+                                {{contact.first_name}}
+                        </td>
+                        <td class="table-cell">
+                                {{contact.last_name}}
+                            
+                        </td>
+                        <td class="table-cell">
+                                {{contact.phone}}
+                        </td>
+                        <td class="table-cell">
+                                {{contact.email}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
 {% endblock content %}

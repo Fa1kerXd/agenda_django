@@ -133,8 +133,8 @@ svg {
   transition: background-color var(--transition-fast) ease-in-out;
 }
 
-.table-row:nth-of-type(ikkkkkkkkkkkkkkkk                        fdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcujjjjjjjjjjjjjjjjjjjjjj~~~~~~~~~~~~~~~~;;;;;;;;;;;;;;;;;;vb  /;;;;;;;;;;;;;;tyq                                                                                                                                            ) {
-  background: var(--clr-dark-shadow-5);
+.table-row:nth-of-type(2n){                                                                                                                                               
+  background: var(--clr-dark-shadow-5)
 }
 
 .table-row:not(.table-row-header):hover {
