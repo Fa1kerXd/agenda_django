@@ -1,7 +1,7 @@
 # 📇 Agenda de Contatos
 
 Bem-vindo! Este é um projeto de agenda de contatos desenvolvido com Django, oferecendo uma forma prática e organizada de gerenciar seus contatos.
-
+OBS: Criado a partir de um modelo do Otávio Miranda.
 ---
 
 ## 📋 Sobre o Projeto
