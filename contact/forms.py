@@ -3,6 +3,13 @@ from django.forms import ModelForm, ValidationError
 from django import forms
 
 class ContactForm(ModelForm):
+    pictures = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'accept': 'image/*'
+            }
+        )
+    )
     first_name = forms.CharField(
         widget=forms.TextInput(attrs={
             'placeholder': 'Digite o primeiro nome',
@@ -17,7 +24,7 @@ class ContactForm(ModelForm):
        
     class Meta:
         model = models.Contact
-        fields = 'first_name',"last_name", "phone", 'email', 'description', 'category',
+        fields = 'first_name',"last_name", "phone", 'email', 'description', 'category','pictures',
       
 
     def clean(self):
