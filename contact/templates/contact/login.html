@@ -1,0 +1,28 @@
+{% comment %}
+    Arquivo utilizado para usuario se autenticar no site.
+{% endcomment %}
+
+{# Extendendo arquivo Principal#}
+{%extends "global/base.html"%}
+
+
+{%block content%} 
+    <div class="form-wrapper">
+        {% if not user.is_authenticated %}
+            <h2>Login</h2>
+            {#  Mensagem de info quando o user fizer logout #}
+            {{message}}
+        {% include "contact/partials/_user-form.html" %}
+
+        {% endif %}
+        {% if user.is_authenticated %}
+        <h2>{{title}}</h2>
+        {# Mensagem de sucess quando o user se autenticar com sucesso! #}
+        <p>{{message}}</p>
+        <p>Você fez login como {{user.username}}</p>
+        <p>Clicka <a href="{% url "contact:logout" %}">aqui</a> para sair.</p>
+
+        {% endif %}
+
+
+{%endblock content%}
