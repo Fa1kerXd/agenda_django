@@ -34,7 +34,7 @@ def user_update(request):
     if not request.method is 'POST':
         return render(
             request,
-            'contact/register.html',
+            'contact/user_update.html',
             {
              'form': form,   
             }
@@ -44,19 +44,14 @@ def user_update(request):
     if not form.is_valid():
         return render(
             request,
-            'contact/register.html',
+            'contact/user_update.html',
             {
              'form': form,   
             }
         )
     form.save()
-    return render(
-            request,
-            'contact/register.html',
-            {
-             'form': form,   
-            }
-        )
+    auth.login(request, request.user)
+    return redirect('contact:user_update')
 
 
 
