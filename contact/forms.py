@@ -11,7 +11,8 @@ class ContactForm(ModelForm):
             attrs={
                 'accept': 'image/*'
             }
-        )
+        ),
+        required=False
     )
     first_name = forms.CharField(
         widget=forms.TextInput(attrs={
@@ -93,6 +94,9 @@ class RegisterUser(UserCreationForm):
      
 
 class RegisterUpdateForm(forms.ModelForm):
+
+   
+
     first_name = forms.CharField(
         min_length=2,
         max_length=30,
@@ -160,6 +164,9 @@ class RegisterUpdateForm(forms.ModelForm):
                 )
         return super().clean()
     
+
+    def clean_owner(self):
+        current_owner = self.cleaned_data.get("owner")
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

@@ -4,6 +4,7 @@
     method="POST">
         {% csrf_token %}
         {% for field in form %}
+        
             <div class="form-content">
                 <div class="form-group">
                     <label for="{{field.id_for_name}}">{{field.label}}</label>

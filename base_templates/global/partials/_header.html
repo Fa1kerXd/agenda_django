@@ -2,16 +2,30 @@
         <h1 class="header-heading"><a class="header-link" href='{% url "contact:index" %}'>Agenda</a></h1>
         <nav class="menu">
             <ul class="menu-list">
+                {% if user.is_authenticated %}
                 <li class="menu-item">
                     <a class="menu-link" href="{% url "contact:create" %}">
                         Create Contact
                     </a>
                 </li>
-                  <li class="menu-item">
-                    <a class="menu-link" href="#">
-                        Link 2
+                <li class="menu-item">
+                    <a class="menu-link" href="{% url "contact:user_update" %}">
+                        Profile
                     </a>
                 </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="{% url "contact:logout" %}">
+                        Logout
+                    </a>
+                </li>
+                {% else %}
+                    <a class="menu-link" href="{% url "contact:login" %}">
+                        Login                   
+                    </a>
+                     <a class="menu-link" href="{% url "contact:register" %}">
+                        Register                   
+                    </a>
+                {% endif %}
             </ul>
         </nav>
         <div class="search">
