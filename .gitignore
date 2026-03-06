@@ -140,7 +140,6 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-#teste
-te.py
+comando/*
 
 
