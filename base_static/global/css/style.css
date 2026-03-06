@@ -4,6 +4,7 @@
   --link-light-color: rgb(156, 217, 255);
   --clr-white: rgb(245, 245, 255);
   --clr-black: rgb(0, 0, 30);
+  --clr-red: rgba(211, 11, 11, 0.795);
   --clr-light-gray: rgb(230, 230, 245);
   --clr-dark-shadow-5: rgba(0, 0, 10, 5%);
   --clr-dark-shadow-10: rgba(0, 0, 10, 10%);
@@ -55,7 +56,7 @@ svg {
 }
 
 .header {
-  background: var(--clr-black);
+  background: var(--clr-red);
   padding: var(--spacing);
   box-shadow: 0 5px 10px 2px var(--clr-dark-shadow-20);
   z-index: 1;
